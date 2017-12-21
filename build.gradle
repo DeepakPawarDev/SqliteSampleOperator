@@ -2,6 +2,7 @@
 
 buildscript {
     repositories {
+
         jcenter()
     }
     dependencies {
@@ -14,10 +15,15 @@ buildscript {
 
 allprojects {
     repositories {
+        maven { url 'https://maven.google.com' }
+
         jcenter()
     }
 }
+ext {
 
+    roomVersion = '1.0.0-rc1'
+}
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
